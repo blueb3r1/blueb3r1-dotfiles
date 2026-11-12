@@ -60,21 +60,21 @@ end
 -- )
 create_bind(vars.kbLauncher, hl.dsp.exec_cmd("rofi -show drun"))
 -- Misc
-create_bind(vars.kbSession, hl.dsp.global("caelestia:session"))
-create_bind(vars.kbShowSidebar, hl.dsp.global("caelestia:sidebar"))
-create_bind(vars.kbClearNotifs, hl.dsp.global("caelestia:clearNotifs"), locked)
-create_bind(vars.kbShowPanels, hl.dsp.global("caelestia:showall"))
+-- create_bind(vars.kbSession, hl.dsp.global("caelestia:session"))
+-- create_bind(vars.kbShowSidebar, hl.dsp.global("caelestia:sidebar"))
+-- create_bind(vars.kbClearNotifs, hl.dsp.global("caelestia:clearNotifs"), locked)
+-- create_bind(vars.kbShowPanels, hl.dsp.global("caelestia:showall"))
 -- create_bind(vars.kbLock, hl.dsp.global("caelestia:lock"))
 create_bind(vars.kbLock, hl.dsp.exec_cmd("hyprlock"))
 -- Restore lock
-create_bind(vars.kbRestoreLock, function()
-    hl.dispatch(hl.dsp.exec_cmd("caelestia shell -d"))
-    hl.dispatch(hl.dsp.global("caelestia:lock"))
-end, locked)
+-- create_bind(vars.kbRestoreLock, function()
+--     hl.dispatch(hl.dsp.exec_cmd("caelestia shell -d"))
+--     hl.dispatch(hl.dsp.global("caelestia:lock"))
+-- end, locked)
 
 -- Kill/restart
-create_bind("CTRL + SUPER + SHIFT + R", hl.dsp.exec_cmd("caelestia shell -k"), release)
-create_bind("CTRL + SUPER + ALT + R", hl.dsp.exec_cmd("caelestia shell -r -d"), release)
+-- create_bind("CTRL + SUPER + SHIFT + R", hl.dsp.exec_cmd("caelestia shell -k"), release)
+-- create_bind("CTRL + SUPER + ALT + R", hl.dsp.exec_cmd("caelestia shell -r -d"), release)
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
@@ -172,9 +172,9 @@ create_bind(vars.kbScreenshotFreeze, hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | w
 
 -- Chọn vùng để chụp và mở ra để vẽ/chỉnh sửa (SUPER + SHIFT + ALT + S)
 create_bind(vars.kbScreenshotRegion, hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | swappy -f -"))
-create_bind(vars.kbRecord, hl.dsp.exec_cmd("caelestia record"))
-create_bind(vars.kbRecordSound, hl.dsp.exec_cmd("caelestia record -s"))
-create_bind(vars.kbRecordRegion, hl.dsp.exec_cmd("caelestia record -r"))
+-- create_bind(vars.kbRecord, hl.dsp.exec_cmd("caelestia record"))
+-- create_bind(vars.kbRecordSound, hl.dsp.exec_cmd("caelestia record -s"))
+-- create_bind(vars.kbRecordRegion, hl.dsp.exec_cmd("caelestia record -r"))
 create_bind(vars.kbColorPicker, hl.dsp.exec_cmd("hyprpicker -a"))
 
 -- Brightness
@@ -183,10 +183,10 @@ create_bind(vars.kbColorPicker, hl.dsp.exec_cmd("hyprpicker -a"))
 create_bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), locked_repeating)
 create_bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), locked_repeating)
 -- Media
-create_bind({ vars.kbMediaToggle, "XF86AudioPlay", "XF86AudioPause" }, hl.dsp.global("caelestia:mediaToggle"), locked)
-create_bind({ vars.kbMediaNext, "XF86AudioNext" }, hl.dsp.global("caelestia:mediaNext"), locked)
-create_bind({ vars.kbMediaPrev, "XF86AudioPrev" }, hl.dsp.global("caelestia:mediaPrev"), locked)
-create_bind({ vars.kbMediaStop, "XF86AudioStop" }, hl.dsp.global("caelestia:mediaStop"), locked)
+-- create_bind({ vars.kbMediaToggle, "XF86AudioPlay", "XF86AudioPause" }, hl.dsp.global("caelestia:mediaToggle"), locked)
+-- create_bind({ vars.kbMediaNext, "XF86AudioNext" }, hl.dsp.global("caelestia:mediaNext"), locked)
+-- create_bind({ vars.kbMediaPrev, "XF86AudioPrev" }, hl.dsp.global("caelestia:mediaPrev"), locked)
+-- create_bind({ vars.kbMediaStop, "XF86AudioStop" }, hl.dsp.global("caelestia:mediaStop"), locked)
 
 -- Volume
 create_bind({ vars.kbVolumeMute, "XF86AudioMute" }, hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), locked)
@@ -211,9 +211,9 @@ create_bind(
 create_bind(vars.kbSleep, hl.dsp.exec_cmd(vars.sleepGestureCmd), locked)
 
 -- Clipboard and emoji picker
-create_bind(vars.kbClipboard, hl.dsp.exec_cmd("pkill fuzzel || caelestia clipboard"))
-create_bind(vars.kbClipboardDel, hl.dsp.exec_cmd("pkill fuzzel || caelestia clipboard -d"))
-create_bind(vars.kbEmoji, hl.dsp.exec_cmd("pkill fuzzel || caelestia emoji -p"))
+-- create_bind(vars.kbClipboard, hl.dsp.exec_cmd("pkill fuzzel || caelestia clipboard"))
+-- create_bind(vars.kbClipboardDel, hl.dsp.exec_cmd("pkill fuzzel || caelestia clipboard -d"))
+-- create_bind(vars.kbEmoji, hl.dsp.exec_cmd("pkill fuzzel || caelestia emoji -p"))
 create_bind(
     vars.kbClipboardPasteLatest,
     hl.dsp.exec_cmd('sleep 0.5s && ydotool type -d 1 "$(cliphist list | head -1 | cliphist decode)"'),
