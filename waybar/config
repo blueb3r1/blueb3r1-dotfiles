@@ -1,0 +1,108 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "backlight",
+        "battery"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "default": "〇"
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "disable-scroll": true,
+        "all-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M  |  %d/%m}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+    "tray": {
+        "icon-size": 17,
+        "spacing": 5
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  Wired",
+        "format-disconnected": "⚠  Offline",
+        "on-click": "nm-connection-editor"
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "tooltip-format-connected": "Đang kết nối:\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "• {device_alias}",
+        "on-click": "blueman-manager"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pwvucontrol"
+    },
+    "backlight": {
+        "device": "amdgpu_bl1",
+        "format": "{icon}  {percent}%",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    }
+}

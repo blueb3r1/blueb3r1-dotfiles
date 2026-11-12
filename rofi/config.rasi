@@ -1,0 +1,87 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    /* Chỉ hiển thị icon và tên ứng dụng */
+    drun-display-format: "{icon} {name}";
+    /* Thay đổi font chữ đồng bộ với hệ thống của bạn */
+    font: "monospace 14";
+    /* Ẩn chữ "drun" thừa thãi ở ô tìm kiếm */
+    display-drun: "";
+}
+
+/* Định nghĩa dải màu Everforest */
+* {
+    bg: #2b3339;
+    bg-sel: #323d43;
+    fg: #d3c6aa;
+    green: #a6b46b;
+    gray: #859289;
+    
+    background-color: @bg;
+    text-color: @fg;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    border: 2px;
+    border-color: @green;
+    padding: 0px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 12px;
+}
+
+inputbar {
+    children: [ entry ];
+    padding: 10px;
+    background-color: @bg-sel;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @gray;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+listview {
+    lines: 7;
+    columns: 1;
+    scrollbar: false;
+    spacing: 4px;
+    border: 1px; 
+}
+
+element {
+    padding: 8px 12px;
+    children: [ element-icon, element-text ];
+    spacing: 12px;
+}
+
+element normal normal,
+element alternate normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element selected normal {
+    background-color: @bg-sel;
+    text-color: @green;
+}
+
+element-icon {
+    size: 1.5em;
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+}

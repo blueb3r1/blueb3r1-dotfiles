@@ -1,0 +1,26 @@
+# ~/.config/mako/config
+
+# Giao diện tổng thể (Dải màu Everforest)
+background-color=#2b3339
+text-color=#d3c6aa
+border-color=#a6b46b
+border-size=1
+border-radius=0
+
+# Font chữ (Đồng bộ với Rofi và Waybar)
+font=jetbrains-mono 14
+
+# Vị trí và khoảng cách
+anchor=top-right
+margin=20
+padding=15
+width=300
+
+# Thời gian hiển thị (mili giây)
+default-timeout=500
+
+icons=14
+
+# Khi có nhiều thông báo
+max-visible=4
+sort=-time
