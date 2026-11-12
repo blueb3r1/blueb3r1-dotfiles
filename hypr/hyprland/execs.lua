@@ -28,7 +28,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swaybg -i /home/blueb3r1/Pictures/Wallpapers/wallpaper.jpg -m fill")
     hl.exec_cmd("waybar")
     -- Start shell
-    -- hl.exec_cmd("caelestia shell -d")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("mako")
 end)

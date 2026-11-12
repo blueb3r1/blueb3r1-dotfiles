@@ -19,7 +19,7 @@ width=300
 # Thời gian hiển thị (mili giây)
 default-timeout=500
 
-icons=14
+icons=0
 
 # Khi có nhiều thông báo
 max-visible=4
