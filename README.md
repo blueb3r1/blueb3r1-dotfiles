@@ -74,7 +74,10 @@ cp -rf hypr waybar foot rofi mako thunar fastfetch gtk-4.0 ~/.config/
 ```bash
 hyprctl reload
 ```
-
+**Or. Automation**
+```bash
+chmod +x setup.sh && ./setup.sh
+```
 ---
 
 ## 🎨 Color scheme: Everforest
