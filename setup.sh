@@ -29,8 +29,9 @@ mkdir -p ~/.config/foot/
 mkdir -p ~/.config/fastfetch/
 mkdir -p ~/.config/rofi/
 mkdir -p ~/.config/thunar/
+mkdir -p ~/Documents/
 
 echo "Tien hanh cai dat"
 cp -rf hypr waybar foot rofi mako thunar fastfetch gtk-4.0 ~/.config/
-
+cp -rf Wallpapers ~/Documents/
 echo "----------CAI DAT THANH CONG------------"

@@ -19,7 +19,7 @@
 ## 🖼️ Showcase
 
 <div align="center">
-  <img src="assets/image.webp" alt="Desktop Preview" width="85%" />
+  <img src="assets/image.png" alt="Desktop Preview" width="85%" />
 </div>
 
 ---
